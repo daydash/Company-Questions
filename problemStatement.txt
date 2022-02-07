@@ -1,6 +1,0 @@
-Consider a non-empty 2 X n string matrix <b>inmatrix</b> where 1st row contains string elements with ar least one digit and 2nd row contains string elements with only digits. Identify and print a 2X n matrix <b>outmatrix</b> based on the logic given below
-
-Starting from the leftmost element in first row of inmatrix, for each element present in first row column col of inmatrix,
-
-Identify the numberString formed by concaternating the digits of the elemnt in order of their occurrence from left to right and check if the same numberString is present in the second row of inmatrix(in any column)
-if the numberString is present in the secong row, add the nukberString to the frist row of outmatrix
