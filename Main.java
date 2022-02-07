@@ -28,7 +28,7 @@ public class Main {
 //        inmatrix.get(1).add(0, "13");
 //        inmatrix.get(1).add(1, "3");
 //        inmatrix.get(1).add(2, "45");
-//
+
 //        System.out.println(inmatrix);
 
 
@@ -49,8 +49,15 @@ public class Main {
 
         outmatrix = selection(inmatrix);
 
-        System.out.println(outmatrix);
+//        System.out.println(outmatrix);
 
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(outmatrix.get(i).get(j));
+                if(j<2) System.out.print(", ");
+            }
+            System.out.println();
+        }
 
     }
 
@@ -66,38 +73,21 @@ public class Main {
 //            for (int j = 0; j < 2; j++) {
 
 
-                for (int k = 0; k < 2 /*inmatrix.get(1).size()*/; k++) {
-                    if (inmatrix.get(1).get(k).equals(num)) {
-                        outmatrix.get(0).add(i, alpha);
-                        outmatrix.get(1).add(i, num);
-                    } else {
-                        outmatrix.get(0).add(i, "NA");
-                        outmatrix.get(1).add(i, "NA");
-                    }
+            for (int k = 1; k < 3 /*inmatrix.get(1).size()*/; k++) {
+
+                if (inmatrix.get(1).get(k).equals(num)) {
+                    outmatrix.get(0).add(i, alpha);
+                    outmatrix.get(1).add(i, num);
                 }
+                    else {
+                        outmatrix.get(0).add("NA");
+                        outmatrix.get(1).add("NA");
+                    }
             }
+        }
 //        }
         return outmatrix;
     }
-
-//    static String extractInt(String str) {
-//        // Replacing every non-digit number
-//        // with a space(" ")
-////        str = str.replaceAll("[^\\d]", " ");
-//
-//        // Remove extra spaces from the beginning
-//        // and the ending of the string
-//        str = str.trim();
-//
-//        // Replace all the consecutive white
-//        // spaces with a single space
-//        str = str.replaceAll(" +", " ");
-//
-//        if (str.equals(""))
-//            return "-1";
-//
-//        return str;
-//    }
 
     static String extractNum(String str) {
         StringBuilder num = new StringBuilder();
@@ -107,7 +97,7 @@ public class Main {
                 num.append(str.charAt(i));
 
         }
-        System.out.println(num.toString());
+//        System.out.println(num.toString());
         return num.toString();
     }
 
@@ -119,7 +109,7 @@ public class Main {
                 alpha.append(str.charAt(i));
 
         }
-        System.out.println(alpha.toString());
+//        System.out.println(alpha.toString());
         return alpha.toString();
     }
 
