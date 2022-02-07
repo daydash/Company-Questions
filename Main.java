@@ -15,21 +15,21 @@ public class Main {
         for (int i = 0; i < 2; i++) {
             inmatrix.add(new ArrayList<String>());
         }
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                inmatrix.get(i).add(in.next());
+            }
+        }
+
+//        inmatrix.get(0).add(0, "mo3s");
+//        inmatrix.get(0).add(1, "t23m");
+//        inmatrix.get(0).add(2, "4tq5");
+//        inmatrix.get(1).add(0, "13");
+//        inmatrix.get(1).add(1, "3");
+//        inmatrix.get(1).add(2, "45");
 //
-//        for (int i = 0; i < 2; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                inmatrix.get(i).add(in.next());
-//            }
-//        }
-
-        inmatrix.get(0).add(0, "mo3s");
-        inmatrix.get(0).add(1, "t23m");
-        inmatrix.get(0).add(2, "4tq5");
-        inmatrix.get(1).add(0, "13");
-        inmatrix.get(1).add(1, "3");
-        inmatrix.get(1).add(2, "45");
-
-        System.out.println(inmatrix);
+//        System.out.println(inmatrix);
 
 
 //        inmatrix = {{"mo3s","t23m","4tq5"},{"13","3","45"}};
